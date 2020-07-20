@@ -21,6 +21,25 @@ UITextObject* Menu::getItem(Key key) {
 }
 
 Key Menu::getActiveItem() {
+
+	std::map<Key, UITextObject*>::iterator iter;
+	bool selectedItem = false;
+
+	for (iter = m_objects.begin(); iter != m_objects.end(); iter++)
+	{
+		if (iter->second->is_Highlighted())
+		{
+			selectedItem = true;
+			m_highlighted = iter->first;
+			break;
+		}
+	}
+
+	if (!selectedItem)
+	{
+		m_highlighted = Key::NONE;
+	}
+
 	return m_highlighted;
 }
 

@@ -33,7 +33,20 @@ void MainMenuScreen::ExecuteEvent(SDL_Event e) {
 	{
 		if (e.button.button == SDL_BUTTON_LEFT)
 		{
-			std::cout << "Left Mouse Button Pressed" << std::endl;
+			Key active = m_menu->getActiveItem();
+			
+			if (active == Key::Play)
+			{
+				m_complete = true;
+			}
+			else if (active == Key::Options)
+			{
+				std::cout << "Options selected" << std::endl;
+			}
+			else if (active == Key::Exit)
+			{
+				m_quit = true;
+			}
 		}
 	}
 }

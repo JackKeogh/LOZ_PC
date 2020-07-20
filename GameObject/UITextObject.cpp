@@ -39,3 +39,8 @@ void UITextObject::RemoveHighlight() {
 		setColor(m_originalColor);
 	}
 }
+
+bool UITextObject::is_Highlighted()
+{
+	return m_highlighted;
+}

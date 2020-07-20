@@ -18,4 +18,6 @@ public:
 	void Highlight();
 
 	void RemoveHighlight();
+
+	bool is_Highlighted();
 };

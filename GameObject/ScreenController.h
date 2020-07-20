@@ -8,7 +8,8 @@
 enum class ScreenType {
 	Splash,
 	Title,
-	MainMenu
+	MainMenu,
+	LoadGame
 };
 
 class ScreenController {
