@@ -21,7 +21,7 @@ void ScreenController::Initialise() {
 	m_screens.insert(std::pair<ScreenType, Screen*>(ScreenType::MainMenu, new MainMenuScreen));
 
 	// Load Game Screen
-	m_screens.insert(std::pair<ScreenType, Screen*>(ScreenType::LoadGame, new TitleScreen));
+	m_screens.insert(std::pair<ScreenType, Screen*>(ScreenType::GameSelect, new GameSelectScreen));
 }
 
 void ScreenController::ExecuteEvent(SDL_Event e) {
@@ -66,7 +66,7 @@ void ScreenController::ChangeScreen() {
 		else if (m_screens[m_current]->hasCompleted())
 		{
 			m_screens[m_current]->Reset();
-			m_current = ScreenType::LoadGame;
+			m_current = ScreenType::GameSelect;
 		}
 	}
 }

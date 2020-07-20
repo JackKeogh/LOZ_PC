@@ -4,12 +4,13 @@
 #include "Splash_Screen.h"
 #include "TitleScreen.h"
 #include "MainMenuScreen.h"
+#include "GameSelectScreen.h"
 
 enum class ScreenType {
 	Splash,
 	Title,
 	MainMenu,
-	LoadGame
+	GameSelect
 };
 
 class ScreenController {
