@@ -6,6 +6,9 @@
 class GameSelectScreen : public Screen {
 private:
 	SpriteObject* m_background;
+	Object* m_mouse;
+
+	void Mouse_Update();
 
 public:
 	GameSelectScreen();

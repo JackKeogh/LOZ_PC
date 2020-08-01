@@ -26,6 +26,8 @@ MainMenuScreen::~MainMenuScreen() {
 
 	delete m_menu;
 
+	delete m_background;
+
 }
 
 void MainMenuScreen::ExecuteEvent(SDL_Event e) {
